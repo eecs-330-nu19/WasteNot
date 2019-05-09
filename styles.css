@@ -1,3 +1,40 @@
 #content {
-     padding: 20px
+     padding-top: 20px
  }
+
+.flex-container {
+    display: flex;
+    flex-direciton: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#index div {
+    margin: 20px;
+    flex-basis: 150px;
+    background-color: grey;
+}
+
+
+#title {
+    color: #5cb031;
+    background-color: #e6e6e6;
+    padding: 5px;
+    text-align: center;
+}
+
+navbar {
+    display: flex;
+    flex-direciton: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    background-color: darkgrey;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding: 15px;
+}
+navbar i {
+    font-size: 20px;
+}
