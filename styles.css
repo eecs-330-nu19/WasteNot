@@ -9,10 +9,23 @@
     flex-wrap: wrap;
 }
 
-#index div {
+#index {
+    margin-bottom: 40px;
+}
+
+#index a {
     margin: 20px;
     flex-basis: 150px;
-    background-color: grey;
+}
+
+#index a p {
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+#index a img {
+    width: 150px;
+    height: auto;
 }
 
 
