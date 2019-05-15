@@ -18,42 +18,105 @@
 <H1 id="title">WasteNot</H1>
 <div id='content' class="container">
     <div id='index' class="flex-container">
-        <a href="/items/banana">
+        <a data-distance=".5" data-category="fruit" data-expiry='3' href="/items/banana">
             <img src="images/banana.jpg"/>
             <p>3 Bananas</p>
             <p>0.5 Miles</p>
+            <p>Expires in 3 days</p>
         </a>
-        <a href="/items/banana/">
+        <a data-distance="1" data-category='vegetable' data-expiry='2' href="/items/banana/">
             <img src="images/cabbage.jpg"/>
             <p>Cabbage</p>
             <p>1.0 Miles</p>
+            <p>Expires in 2 days</p>
         </a>
-        <a href="/items/banana/">
+        <a data-distance='2' data-category='dairy' data-expiry='5' href="/items/banana/">
             <img src="images/eggs.jpg"/>
             <p>Dozen Eggs </p>
             <p>2.0 Miles</p>
+            <p>Expires in 5 days</p>
         </a>
-        <a href="/items/banana/">
+        <a data-distance='2.1' data-category='other' data-expiry='10' href="/items/banana/">
             <img src="images/garlic.jpg"/>
             <p>Few cloves of garlic</p>
             <p>2.1 Miles</p>
+            <p>Expires in 10 days</p>
         </a>
-        <a href="/items/banana/">
+        <a data-distance='2.5' data-category='vegetable' data-expiry='3' href="/items/banana/">
             <img src="images/onion.jpg"/>
             <p>Extra onions</p>
             <p>2.5 Miles</p>
+            <p>Expires in 3 days</p>
         </a>
-        <a href="/items/banana/">
+        <a data-distance='2.6' data-category='vegetable' data-expiry='1' href="/items/banana/">
             <img src="images/tomato.jpg"/>
             <p>Tomatoes from my garden</p>
             <p>2.6 Miles</p>
+            <p>Expires in 1 days</p>
         </a>
     </div>
 </div>
 
+<script>
+
+    function parseFilter() {
+        var regex = /[?&]([^=#]+)=([^&#]*)/g,
+            url = window.location.href,
+            params = {},
+            match;
+        while (match = regex.exec(url)) {
+            params[match[1]] = match[2];
+        }
+
+        let distance = parseFloat(params['distance']);
+        let expiry = parseFloat(params['expiry']);
+        if (!distance) {
+            return
+        }
+        console.log('distance: ', distance);
+        console.log('expiry: ', expiry);
+
+        let boxes = document.querySelectorAll('#index a');
+
+        if (params['distance']) {
+            for (let i = 0; i < boxes.length; i++) {
+                let dist = parseFloat(boxes[i].dataset['distance']);
+                if (dist > distance) {
+                    boxes[i].style.display = 'none'
+                }
+            }
+        }
+
+        if (params['expiry']) {
+            for (let i = 0; i < boxes.length; i++) {
+                let expr = parseFloat(boxes[i].dataset['expiry']);
+                console.log(expr,expiry);
+                if (expr < expiry) {
+                    boxes[i].style.display = 'none'
+                }
+            }
+        }
+
+        if (params['categories']) {
+            let categories = params['categories'].toLowerCase().split(',');
+            console.log(categories);
+            for (let i = 0; i < boxes.length; i++) {
+                let category = boxes[i].dataset['category'].toLowerCase();
+                console.log(category,categories);
+                if (!(categories.includes(category))) {
+                    boxes[i].style.display = 'none';
+                    console.log('hide by category');
+                }
+            }
+        }
+    }
+    parseFilter();
+
+</script>
+
 <navbar>
-    <i class="fas fa-search"></i>
-    <i class="fas fa-home"></i>
+    <a href="filter.html"><i class="fas fa-search"></i></a>
+    <a href="index.html"><i class="fas fa-home"></i></a>
     <i class="fas fa-bars"></i>
 </navbar>
 </body>
