@@ -182,3 +182,127 @@ navbar i {
 #filter h2 {
     margin-top: 20px
 }
+
+/*Danielle's Css*/
+
+#viewprofile {
+    background-color: #5cb031;
+}
+
+.propic {
+    border-radius: 50%;
+    width: 30%;
+    height: auto;
+} 
+
+.proname {
+    font-size: 25px;
+    color: #e6e6e6;
+}
+
+.proitems {
+    text-align: center;
+    padding-top: 30px;
+ 
+}
+.pronewlinks {
+    border-top: 2px solid;
+    border-color: black;
+    font-size: 30px;
+}
+#prolinkformat a{
+    color: #e6e6e6;
+}
+#prolinkformat a:hover {
+  color: dodgerblue;
+}
+.profileitem {
+    color: #e6e6e6;
+}
+.editing {
+    margin: 10px;
+    background-color: darkgrey;
+    border: 1px solid grey;
+    color: #e6e6e6;
+    width: 40%;
+    height: auto;
+    padding: 2px;
+}
+#viewer{
+    font-size: 20px;
+}
+#viewer:hover {
+    color: dodgerblue;
+}
+
+#proaligning {
+    text-align: right;
+    width: 20%;
+    height: auto;
+    display: inline-block;
+    font-size: 20px;
+
+}
+#proaligning-password {
+    text-align: right;
+    width: 20%;
+    height: auto;
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.editbutton {
+  color: #e6e6e6;
+  background-color: darkgrey;
+  border-color: grey;
+  font-size: 20px;
+}
+
+procloseout {   
+    display: inline-block;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+    width: 50%;
+    padding: 15px;
+
+}
+.proback  {
+  text-align: left;
+}
+.procloseoutbutton {
+  text-align: right;
+  margin-left: 50%;
+}
+procloseout a {
+    font-size: 20px;
+}
+navbar a {
+  color: black;
+}
+
+.anitem {
+  border-bottom: 5px solid darkgrey;
+  text-align: center;
+}
+.itemInfo{
+  display: inline-block;
+  color: black;
+  width: 60%;
+  text-align: right;
+  vertical-align: middle;
+}
+#information{
+  color: #5cb031;
+  font-size: 15px;
+
+}
+.anitem img {
+  border: 5px solid #5cb031;
+  width: 150px;
+  height: auto;
+  margin: 10px;
+}
+
+/*End of Danielle's Css*/
