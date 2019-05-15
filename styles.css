@@ -51,3 +51,15 @@ navbar {
 navbar i {
     font-size: 20px;
 }
+
+#filter button {
+    margin: 2px;
+}
+
+.flex-container.left {
+    justify-content: flex-start
+}
+
+#filter h2 {
+    margin-top: 20px
+}
