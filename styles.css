@@ -4,7 +4,7 @@
 
 .flex-container {
     display: flex;
-    flex-direciton: row;
+    flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
@@ -38,7 +38,7 @@
 
 navbar {
     display: flex;
-    flex-direciton: row;
+    flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: nowrap;
     background-color: darkgrey;
@@ -51,7 +51,6 @@ navbar {
 navbar i {
     font-size: 20px;
 }
-
 
 #login-body #logo{
   font-size:100px;
@@ -97,4 +96,77 @@ navbar i {
   font-style: italic;
   font-size: 20px;
   margin: 0;
+
+.new-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#new .wrapper {
+    text-align: center;
+    margin: 20px;
+    flex-basis: 100px;
+    background-color: lightgrey;
+    border: gray;
+    border-style: solid;
+    border-width: 2px;
+    /* center divs*/
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    /* give it dimensions */
+    width: 50%;
+}
+
+.wrapper i {
+  margin-top: 15px;
+  font-size: 50px;
+}
+
+#new .caption {
+  text-align: center;
+  margin-bottom: -20px;
+}
+
+#new .box {
+  margin: 20px;
+  flex-basis: 30px;
+  background-color: lightgrey;
+  border: gray;
+  border-style: solid;
+  border-width: 2px;
+  /* center divs*/
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  /* give it dimensions */
+  width: 50%;
+}
+
+#expiration {
+  margin-top: 15px;
+  margin-left: 25%;
+	width: 50%;
+}
+
+#minimum {
+	margin-left: 25%;
+	font-size: 12px;
+}
+
+#maximum{
+	position: relative;
+	bottom: 18px;
+	margin-left: 70%;
+	font-size: 12px;
+}
+
+#new .submit {
+    color: #5cb031;
+    text-align: center;
+    font-size: 30px;
 }
