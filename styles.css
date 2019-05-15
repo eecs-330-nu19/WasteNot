@@ -51,3 +51,50 @@ navbar {
 navbar i {
     font-size: 20px;
 }
+
+
+#login-body #logo{
+  font-size:100px;
+  color: #5cb031;
+  background-color: #e6e6e6;
+  margin-bottom: 0;
+  text-align: center;
+  font-style: italic;
+  letter-spacing: -20px;
+  display: block;
+}
+
+#login-body #title{
+  color: #FFFFFF;
+  font-size: 20px;
+  padding:10px;
+  display: block;
+}
+
+#login-body #content{
+  height: 100%;
+}
+
+#login-body .login-area{
+  font-size: 25px;
+  font-weight: lighter;
+  margin: 30px;
+  height: 100%;
+}
+
+#login-body #submit-button{
+  background-color: #5cb031; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#login-body #forgot-password{
+  font-style: italic;
+  font-size: 20px;
+  margin: 0;
+}
