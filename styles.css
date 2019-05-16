@@ -182,3 +182,9 @@ navbar i {
 #filter h2 {
     margin-top: 20px
 }
+
+@media only screen and (max-width: 1000px) {
+    #new .box, #new .wrapper {
+        width: 85% !important;
+    }
+}
