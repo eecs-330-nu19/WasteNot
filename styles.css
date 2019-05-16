@@ -183,6 +183,12 @@ navbar i {
     margin-top: 20px
 }
 
+@media only screen and (max-width: 1000px) {
+    #new .box, #new .wrapper {
+        width: 85% !important;
+    }
+}
+
 /*Danielle's Css*/
 
 #viewprofile {
