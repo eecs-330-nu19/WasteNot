@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>W3.CSS Template!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/input.css"/>
+</head>
+<body>
+
+<H1 id="title">WasteNot</H1>
+<div id='filter' class="container">
+    <H2>Max Distance</H2>
+    <input type="range" min="0" max="50" step="1" value="20" id='distance-slider' onchange="distance_slider()"/>
+    <p><span id="distance-value">20</span> miles</p>
+    <H2>Category</H2>
+    <div class="flex-container left">
+        <button type="button" class="btn btn-secondary" onclick="toggle(this)">Meat</button>
+        <button type="button" class="btn btn-secondary" onclick="toggle(this)">Fruit</button>
+        <button type="button" class="btn btn-secondary" onclick="toggle(this)">Vegetable</button>
+        <button type="button" class="btn btn-secondary" onclick="toggle(this)">Dairy</button>
+        <button type="button" class="btn btn-secondary" onclick="toggle(this)">Other</button>
+    </div>
+
+    <H2>Expires After:</H2>
+    <input type="range" min="0" max="30" step="1" value="1" id='expiry-slider' onchange="expiry_slider()"/>
+    <p><span id="expiry-value">1</span> Day(s)</p>
+
+    <button type='button' class='btn btn-primary' onclick="search()">Search</button>
+</div>
+
+<script>
+    function search() {
+        let distance = document.getElementById('distance-slider').value;
+        let expiry = document.getElementById('expiry-slider').value;
+        let veggies = [];
+        let veggie_buttons = document.querySelectorAll('.btn-secondary');
+        console.log(veggie_buttons);
+        for (let i =0; i < veggie_buttons.length; i++) {
+
+            if (veggie_buttons[i].style.backgroundColor == 'green') {
+                console.log('inner');
+                console.log(veggie_buttons[i].textContent);
+                veggies = veggies.concat(veggie_buttons[i].textContent)
+            }
+        }
+        veggies = veggies.join(',');
+        window.location='index.html?distance='+distance+'&expiry='+expiry+'&categories='+veggies;
+
+    }
+
+    function distance_slider() {
+        document.getElementById('distance-value').innerHTML = document.getElementById('distance-slider').value
+    }
+
+    function expiry_slider() {
+        document.getElementById('expiry-value').innerHTML = document.getElementById('expiry-slider').value
+    }
+
+    function toggle(object) {
+        if (object.style.backgroundColor  == 'green') {
+            object.style.backgroundColor= '#6c757d';
+        } else {
+            object.style.backgroundColor= 'green'
+        }
+    }
+</script>
+
+<navbar>
+    <a href="filter.html"><i class="fas fa-search"></i></a>
+    <a href="index.html"><i class="fas fa-home"></i></a>
+    <a href="profileview.html"><i class="fas fa-bars"></i></a>
+</navbar>
+</body>
+</html>
