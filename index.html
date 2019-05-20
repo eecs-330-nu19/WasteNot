@@ -17,11 +17,12 @@
 
 <H1 id="title">WasteNot</H1>
 <div id='content' class="container">
-    <div id="none-found" style="display:none">
+    <div class="alert alert-warning" role="alert" id="none-found">
         <p class="lead">No items found matching these criteria</p>
         <a href="filter.html"><i class="fa fa-search"></i>  Search</a>
     </div>
-    <div id="search-criteria" class="">
+
+    <div id="search-criteria" class="alert alert-success" role="alert">
         <p>Expiry: <span id="expiration-date"></span> days</p>
         <p>Categories: <span id="categories"></span></p>
         <p>Distance: <<span id="distance"></span> mi</p>
@@ -103,11 +104,13 @@
         let expiration_span = document.getElementById('expiration-date');
         let categories_span = document.getElementById('categories');
         let distance_span = document.getElementById('distance');
-
+        let search_criteria = document.getElementById('search-criteria');
 
 
         if (!distance) {
-            return
+            search_criteria.style.display = 'none';
+            none_found.style.display = 'none';
+
         }
         console.log('distance: ', distance);
         console.log('expiry: ', expiry);
@@ -134,7 +137,9 @@
             }
             console.log(num_hidden,boxes.length);
             if (num_hidden == boxes.length) {
-                none_found.style.display = 'inline';
+                none_found.style.display = 'inline-block';
+                search_criteria.style.display = 'none';
+
             } else {
                 none_found.style.display = 'none';
             }

@@ -32,16 +32,15 @@
     padding: 5px;
     text-align: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    background-color: rgba(202, 255, 158, .2);
     margin-bottom: 5px;
 }
 
 
 #title {
     color: #7ac533;
-    text-shadow: -1px 0px 0px darkgreen;
+    text-shadow: -.5px 0px 0px darkgreen;
     padding: 5px;
     text-align: center;
     padding-bottom:5px;
