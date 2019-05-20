@@ -139,48 +139,11 @@ navbar i {
   flex-wrap: wrap;
 }
 
-#new .wrapper {
-    text-align: center;
-    margin: 20px;
-    flex-basis: 100px;
-    background-color: lightgrey;
-    border: gray;
-    border-style: solid;
-    border-width: 2px;
-    /* center divs*/
-    right: 0;
-    left: 0;
-    margin-right: auto;
-    margin-left: auto;
-    /* give it dimensions */
-    width: 50%;
-}
-
 .wrapper i {
   margin-top: 15px;
   font-size: 50px;
 }
 
-#new .caption {
-  text-align: center;
-  margin-bottom: -20px;
-}
-
-#new .box {
-  margin: 20px;
-  flex-basis: 30px;
-  background-color: lightgrey;
-  border: gray;
-  border-style: solid;
-  border-width: 2px;
-  /* center divs*/
-  right: 0;
-  left: 0;
-  margin-right: auto;
-  margin-left: auto;
-  /* give it dimensions */
-  width: 50%;
-}
 
 #expiration {
   margin-top: 15px;
@@ -200,11 +163,6 @@ navbar i {
 	font-size: 12px;
 }
 
-#new .submit {
-    color: #5cb031;
-    text-align: center;
-    font-size: 30px;
-}
 #filter button {
     margin: 2px;
 }
@@ -217,12 +175,9 @@ navbar i {
     margin-top: 20px
 }
 
-@media only screen and (max-width: 1000px) {
-    #new .box, #new .wrapper {
-        width: 85% !important;
-    }
+#new  {
+    padding: 10px;
 }
-
 /*Danielle's Css*/
 
 #viewprofile {
