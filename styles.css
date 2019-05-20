@@ -63,12 +63,12 @@ navbar {
     justify-content: space-evenly;
     flex-wrap: nowrap;
     background-color: #e9e9e9;
-    height: 50px;
+    height: 60px;
     position: fixed;
     bottom: 0px;
     width: 100%;
     padding: 15px;
-    padding-top: 17px;
+    padding-top: 25px;
     background:
             linear-gradient(
                     to bottom,
@@ -85,6 +85,20 @@ navbar {
 navbar i {
     font-size: 20px;
 }
+
+navbar a {
+    color: black;
+}
+navbar i {
+    margin-right: 5px
+}
+navbar a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
 
 #login-body #logo{
   font-size:100px;
@@ -272,9 +286,6 @@ procloseout {
 }
 procloseout a {
     font-size: 20px;
-}
-navbar a {
-  color: black;
 }
 
 .anitem {
