@@ -337,3 +337,29 @@ navbar a {
 }
 
 /*End of Danielle's Css*/
+
+/* listing page css*/
+
+#listing-image{
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
+
+#listing-info{
+  display: inline-block;
+  width: 70%;
+  margin: 0;
+}
+
+#profile-info{
+  display: inline-block;
+  width: 25%;
+  margin: 0;
+}
+
+#profile-info #profile-picture{
+  width: 100%;
+}
