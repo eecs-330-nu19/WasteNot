@@ -29,12 +29,16 @@
 }
 
 #search-criteria {
-    padding: 5px;
-    text-align: center;
+    padding: 10px;
+    padding-top: 15px;
+    text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-bottom: 5px;
+}
+#search-criteria h3 {
+    text-align: right;
 }
 
 
