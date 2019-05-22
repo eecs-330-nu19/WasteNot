@@ -207,15 +207,11 @@ navbar a {
     padding: 10px;
 }
 /*Danielle's Css*/
-
-#viewprofile {
-    background-color: #e6e6e6;
-}
-
 .propic {
     border-radius: 50%;
     width: 30%;
     height: auto;
+    border: 1px solid black;
 }
 
 .proname {
@@ -244,10 +240,9 @@ navbar a {
 }
 .editing,.notediting  {
     margin: 10px;
-    background-color: darkgrey;
     border: 1px solid grey;
     color: black;
-    width: 40%;
+    width: 55%;
     height: auto;
     padding: 2px;
 }
@@ -260,7 +255,7 @@ navbar a {
 }
 #proaligning, #proaligning-password  {
     text-align: right;
-    width: 100px;
+    width: 90px;
     height: auto;
     display: inline-block;
     font-size: 20px;
@@ -283,7 +278,6 @@ navbar a {
 }
 .editbutton {
   color: black;
-  background-color: darkgrey;
   border-color: grey;
   font-size: 20px;
 }
@@ -300,7 +294,6 @@ navbar a {
   text-align: center;
   width: 100%;
 }
-
 .itemInfo{
   display: inline-block;
   color: black;
@@ -310,16 +303,15 @@ navbar a {
 }
 #information{
   color: #5cb031;
-  font-size: 15px;
+  font-size: 80%;
   width: 95%;
   text-align: right;
 }
 .anitem img {
   border: 5px solid #5cb031;
-  width: 150px;
+  width: 70%;
   height: auto;
-  margin: 10px;
-  margin-left: 5%;
+  margin: 5%;
 }
 #addpic {
   filter: alpha(opacity=0);
@@ -331,15 +323,13 @@ navbar a {
 }
 #labeladdpic{
   color: black;
-  background-color: darkgrey;
-  border-color: grey;
+  border: 1px solid grey;
   width: 200px;
   height: auto;
   text-align: center;
   font-size: 15px;
-  cursor: pointer;
+  cursor: pointer; 
 }
-
 /*End of Danielle's Css*/
 
 /* listing page css*/
