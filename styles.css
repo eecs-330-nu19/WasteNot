@@ -89,6 +89,9 @@ navbar i {
 navbar a {
     color: black;
 }
+navbar a:hover {
+  color: #5cb031;
+}
 navbar i {
     margin-right: 5px
 }
@@ -195,7 +198,7 @@ navbar a {
 /*Danielle's Css*/
 
 #viewprofile {
-    background-color: #5cb031;
+    background-color: #e6e6e6;
 }
 
 .propic {
@@ -206,7 +209,7 @@ navbar a {
 
 .proname {
     font-size: 25px;
-    color: #e6e6e6;
+    color: black;
 }
 
 .proitems {
@@ -216,99 +219,114 @@ navbar a {
 }
 .pronewlinks {
     border-top: 2px solid;
-    border-color: black;
+    border-color: #5cb031;
     font-size: 30px;
 }
 #prolinkformat a{
-    color: #e6e6e6;
+    color: black;
 }
 #prolinkformat a:hover {
-  color: dodgerblue;
+  color: #5cb031;
 }
 .profileitem {
-    color: #e6e6e6;
+    color: black;
 }
-.editing {
+.editing,.notediting  {
     margin: 10px;
     background-color: darkgrey;
     border: 1px solid grey;
-    color: #e6e6e6;
+    color: black;
     width: 40%;
     height: auto;
     padding: 2px;
 }
 #viewer{
     font-size: 20px;
+    cursor: pointer;
 }
 #viewer:hover {
-    color: dodgerblue;
+    color: #5cb031;
 }
-
-#proaligning {
+#proaligning, #proaligning-password  {
     text-align: right;
-    width: 20%;
+    width: 100px;
     height: auto;
     display: inline-block;
     font-size: 20px;
 
 }
 #proaligning-password {
-    text-align: right;
-    width: 20%;
-    height: auto;
-    display: inline-block;
     margin-left: 20px;
-    font-size: 20px;
+}
+.editing:focus {
+  outline: none !important;
+  border: 2px solid #5cb031;
+  box-shadow: 0 0 10px;
 }
 
+.notediting:focus {
+  outline: none !important;
+}
+.notediting{
+  cursor: not-allowed;
+}
 .editbutton {
-  color: #e6e6e6;
+  color: black;
   background-color: darkgrey;
   border-color: grey;
   font-size: 20px;
 }
 
-procloseout {   
-    display: inline-block;
-    height: 50px;
-    position: fixed;
-    bottom: 0px;
-    width: 50%;
-    padding: 15px;
-
-}
-.proback  {
-  text-align: left;
-}
-.procloseoutbutton {
-  text-align: right;
-  margin-left: 50%;
-}
-procloseout a {
-    font-size: 20px;
+.editbutton:hover {
+  background-color: #5cb031;
 }
 
+.editbutton:focus {
+  outline: none !important;
+}
 .anitem {
   border-bottom: 5px solid darkgrey;
   text-align: center;
+  width: 100%;
 }
+
 .itemInfo{
   display: inline-block;
   color: black;
-  width: 60%;
-  text-align: right;
+  width: 49%;
   vertical-align: middle;
+  text-align: left;
 }
 #information{
   color: #5cb031;
   font-size: 15px;
-
+  width: 95%;
+  text-align: right;
 }
 .anitem img {
   border: 5px solid #5cb031;
   width: 150px;
   height: auto;
   margin: 10px;
+  margin-left: 5%;
+}
+#addpic {
+  filter: alpha(opacity=0);
+  opacity: 0;
+  text-align: center;
+}
+#labeladdpic:hover {
+  background: #5cb031;
+}
+#labeladdpic{
+  color: black;
+  background-color: darkgrey;
+  border-color: grey;
+  width: 200px;
+  height: auto;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer; 
 }
 
 /*End of Danielle's Css*/
