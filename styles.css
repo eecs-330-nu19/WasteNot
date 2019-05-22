@@ -146,8 +146,13 @@ navbar a {
 
 #login-body .login-area input{
   border-radius: .25rem;
+  padding: 5px;
 }
 
+/* invalid color */
+#login-body .login-area input[type=email]:invalid {
+  border: 1px solid red;
+}
 
 #login-body #forgot-password {
     font-style: italic;
