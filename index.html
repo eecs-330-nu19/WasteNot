@@ -17,96 +17,182 @@
 
 <H1 id="title">WasteNot</H1>
 <div id='content' class="container">
+    <div style='display:none' class="alert alert-warning" role="alert" id="none-found">
+        <p class="lead">No items found matching these criteria</p>
+        <a href="filter.html"><i class="fa fa-search"></i>  Search</a>
+    </div>
+
+
+    <div style='display:none' class="alert alert-success" role="alert" id="search-found">
+        <p class="lead">Here are the items matching your search</p>
+    </div>
+
+    <div style='display: none' class="alert alert-warning" role="alert" id="none-found-search">
+        <p class="lead">No items matches your search for: <span id="search-string"></span></p>
+        <a href="filter.html"><i class="fa fa-search"></i>  Search</a>
+    </div>
+
+
+
+
+
+    <div id="search-criteria" class="alert alert-success" role="alert">
+
+        <p><strong>Expires In:</strong> <span id="expiration-date"></span> days</p>
+        <p><strong>Categories:</strong> <span id="categories"></span></p>
+        <p><strong>Distance:</strong> <<span id="distance"></span> mi</p>
+
+    </div>
     <div id='index' class="flex-container">
-        <a data-distance=".5" data-category="fruit" data-expiry='3' href="/items/banana">
+        <a data-name="3 Bananas" data-distance=".5" data-category="fruit" data-expiry='3' href="/items/banana">
             <img src="images/banana.jpg"/>
             <p>3 Bananas</p>
             <p>0.5 Miles</p>
             <p>Expires in 3 days</p>
         </a>
-        <a data-distance="1" data-category='vegetable' data-expiry='2' href="/items/banana/">
+        <a data-name="Cabbage" data-distance="1" data-category='vegetable' data-expiry='2' href="/items/banana/">
             <img src="images/cabbage.jpg"/>
             <p>Cabbage</p>
             <p>1.0 Miles</p>
             <p>Expires in 2 days</p>
         </a>
-        <a data-distance='2' data-category='dairy' data-expiry='5' href="/items/banana/">
+        <a data-name="Dozen Eggs " data-distance='2' data-category='dairy' data-expiry='5' href="/items/banana/">
             <img src="images/eggs.jpg"/>
             <p>Dozen Eggs </p>
             <p>2.0 Miles</p>
             <p>Expires in 5 days</p>
         </a>
-        <a data-distance='2.1' data-category='other' data-expiry='10' href="/items/banana/">
+        <a data-name="Few cloves of garlic" data-distance='2.1' data-category='other' data-expiry='10' href="/items/banana/">
             <img src="images/garlic.jpg"/>
             <p>Few cloves of garlic</p>
             <p>2.1 Miles</p>
             <p>Expires in 10 days</p>
         </a>
-        <a data-distance='2.5' data-category='vegetable' data-expiry='3' href="/items/banana/">
+        <a data-name="Extra onions" data-distance='2.5' data-category='vegetable' data-expiry='3' href="/items/banana/">
             <img src="images/onion.jpg"/>
             <p>Extra onions</p>
             <p>2.5 Miles</p>
             <p>Expires in 3 days</p>
         </a>
-        <a data-distance='2.6' data-category='vegetable' data-expiry='1' href="/items/banana/">
+        <a data-name="Tomatoes from my garden" data-distance='2.6' data-category='vegetable' data-expiry='1' href="/items/banana/">
             <img src="images/tomato.jpg"/>
             <p>Tomatoes from my garden</p>
             <p>2.6 Miles</p>
             <p>Expires in 1 days</p>
         </a>
+        <a data-name="2% Milk" data-distance='3.0' data-category='dairy' data-expiry='6' href="/items/milk/">
+            <img src="images/milk.jpg"/>
+            <p>2% Milk</p>
+            <p>3.0 Miles</p>
+            <p>Expires in 6 days</p>
+        </a>
+        <a data-name="Cottage Cheese" data-distance='3.2' data-category='dairy' data-expiry='4' href="/items/cottage/">
+            <img src="images/cottage.jpg"/>
+            <p>Cottage Cheese</p>
+            <p>3.2 Miles</p>
+            <p>Expires in 4 days</p>
+        </a>
+        <a data-name="8 Apples" data-distance='3.5' data-category='fruit' data-expiry='10' href="/items/cottage/">
+            <img src="images/apple.jpg"/>
+            <p>8 Apples</p>
+            <p>3.5 Miles</p>
+            <p>Expires in 10 days</p>
+        </a>
     </div>
+
 </div>
+
 
 <script>
 
-    function parseFilter() {
-        var regex = /[?&]([^=#]+)=([^&#]*)/g,
-            url = window.location.href,
-            params = {},
-            match;
-        while (match = regex.exec(url)) {
-            params[match[1]] = match[2];
-        }
 
+    var regex = /[?&]([^=#]+)=([^&#]*)/g,
+        url = window.location.href,
+        params = {},
+        match;
+    while (match = regex.exec(url)) {
+        params[match[1]] = match[2];
+    }
+
+    let search = params['search'];
+    let none_search = document.getElementById('none-found-search');
+    let search_string = document.getElementById('search-string');
+
+    if (search) {
+        search = search.toLowerCase();
+        let boxes = document.querySelectorAll('#index a');
+        let num_found = 0;
+        for ( let i = 0; i < boxes.length; i++ ) {
+            let box = boxes[i];
+            let name = box.dataset['name'].toLowerCase();
+            console.log(name);
+            if (name.includes(search)) {
+                num_found += 1
+                console.log('inc',num_found);
+            } else {
+                box.style.display =  'none'
+            }
+        }
+        if (num_found == 0 ) {
+            none_search.style.display = 'inherit';
+            search_string.innerText = params['search'];
+
+
+        } else {
+            none_search.style.display = 'none';
+
+        }
+    }
+
+
+    function parseFilter() {
+
+        let is_filtering = parseInt(params['filter']); // 1 for a search
         let distance = parseFloat(params['distance']);
         let expiry = parseFloat(params['expiry']);
-        if (!distance) {
-            return
+
+        let none_found = document.getElementById('none-found'); // Box we show if search has no results
+
+        let expiration_span = document.getElementById('expiration-date'); // Where to put the expiration for a search
+        let categories_span = document.getElementById('categories'); // Where to put the categorie in the search
+        let distance_span = document.getElementById('distance'); // text area to show user what dist they searched for
+        let search_criteria = document.getElementById('search-criteria'); // Box holding the search criteria for a good search
+
+        if (!is_filtering) {
+            search_criteria.style.display = 'none';
+            none_found.style.display = 'none';
         }
+
         console.log('distance: ', distance);
         console.log('expiry: ', expiry);
 
         let boxes = document.querySelectorAll('#index a');
 
         if (params['distance']) {
+            let num_hidden = 0;
+            let categories = params['categories'].toLowerCase().split(',');
+            expiration_span.innerText = expiry.toString();
+            categories_span.innerText = categories.join(', ');
+            distance_span.innerText = distance.toString();
+
+
             for (let i = 0; i < boxes.length; i++) {
                 let dist = parseFloat(boxes[i].dataset['distance']);
-                if (dist > distance) {
-                    boxes[i].style.display = 'none'
-                }
-            }
-        }
-
-        if (params['expiry']) {
-            for (let i = 0; i < boxes.length; i++) {
                 let expr = parseFloat(boxes[i].dataset['expiry']);
-                console.log(expr,expiry);
-                if (expr < expiry) {
-                    boxes[i].style.display = 'none'
+                let category = boxes[i].dataset['category'].toLowerCase();
+                if (dist > distance || expr > expiry || (!(categories.includes(category))) ) {
+                    boxes[i].style.display = 'none';
+                    num_hidden += 1
                 }
             }
-        }
+            console.log(num_hidden,boxes.length);
+            if (num_hidden == boxes.length) {
+                none_found.style.display = 'inline-block';
+                search_criteria.style.display = 'none';
 
-        if (params['categories']) {
-            let categories = params['categories'].toLowerCase().split(',');
-            console.log(categories);
-            for (let i = 0; i < boxes.length; i++) {
-                let category = boxes[i].dataset['category'].toLowerCase();
-                console.log(category,categories);
-                if (!(categories.includes(category))) {
-                    boxes[i].style.display = 'none';
-                    console.log('hide by category');
-                }
+
+            } else {
+                none_found.style.display = 'none';
             }
         }
     }
@@ -115,9 +201,10 @@
 </script>
 
 <navbar>
-    <a href="filter.html"><i class="fas fa-search"></i></a>
-    <a href="index.html"><i class="fas fa-home"></i></a>
-    <a href="profileview.html"><i class="fas fa-bars"></i></a>
+    <a href="filter.html"><i class="fas fa-search"></i>Search</a>
+    <a href="add_listing.html"><i class="fas fa-plus"></i>Add Item</a>
+    <a href="index.html"><i class="fas fa-home"></i>Home</a>
+    <a href="profileview.html"><i class="fas fa-bars"></i>Menu</a>
 </navbar>
 </body>
 </html>

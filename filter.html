@@ -30,21 +30,64 @@
         <button type="button" class="btn btn-secondary" onclick="toggle(this)">Other</button>
     </div>
 
-    <H2>Expires After:</H2>
-    <input type="range" min="0" max="30" step="1" value="1" id='expiry-slider' onchange="expiry_slider()"/>
-    <p><span id="expiry-value">1</span> Day(s)</p>
+    <H2>Expires In</H2>
+    <div class="form-check">
+        <input id='expires_1' class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="3" checked>
+        <label class="form-check-label" for="exampleRadios1">
+            A few days
+        </label>
+    </div>
+    <div class="form-check">
+        <input id='expires_2' class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="7">
+        <label class="form-check-label" for="exampleRadios2">
+            Less than a week
+        </label>
+    </div>
+    <div class="form-check">
+        <input id='expires_3' class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="30" checked>
+        <label class="form-check-label" for="exampleRadios3">
+            Less than a month
+        </label>
+    </div>
+    <br/>
+    <button type='button' class='btn btn-primary' onclick="filter()">Filter</button>
 
-    <button type='button' class='btn btn-primary' onclick="search()">Search</button>
+    <h2>Search</h2>
+    <form>
+        <div class="form-group">
+    <div class="form-group">
+    <input type="text" id="search">
+    </div>
+            <button type='button' class='btn btn-primary' onclick="search_for_string()">Search</button></div>
+    </form>
+
 </div>
 
 <script>
-    function search() {
+    function search_for_string() {
+        console.log('searhcing');
+        let text = document.getElementById('search').value;
+        window.location = 'index.html?search='+text;
+    }
+
+    function filter() {
+        let expiry_1 = document.getElementById('expires_1');
+        let expiry_2 = document.getElementById('expires_2');
+        let expiry_3 = document.getElementById('expires_3');
+        let expiry = undefined;
+        if (expiry_1.checked) {
+            expiry = 3;
+        } else if (expiry_2.checked) {
+            expiry = 7;
+        } else if ( expiry_3.checked) {
+            expiry = 30;
+        }
+
         let distance = document.getElementById('distance-slider').value;
-        let expiry = document.getElementById('expiry-slider').value;
         let veggies = [];
         let veggie_buttons = document.querySelectorAll('.btn-secondary');
         console.log(veggie_buttons);
-        for (let i =0; i < veggie_buttons.length; i++) {
+        for (let i = 0; i < veggie_buttons.length; i++) {
 
             if (veggie_buttons[i].style.backgroundColor == 'green') {
                 console.log('inner');
@@ -52,8 +95,11 @@
                 veggies = veggies.concat(veggie_buttons[i].textContent)
             }
         }
+        if (veggies.length == 0) {
+            veggies = ['meat','fruit','vegetables','dairy','other']
+        }
         veggies = veggies.join(',');
-        window.location='index.html?distance='+distance+'&expiry='+expiry+'&categories='+veggies;
+        window.location = 'index.html?filter=1&distance=' + distance + '&expiry=' + expiry + '&categories=' + veggies;
 
     }
 
@@ -61,23 +107,22 @@
         document.getElementById('distance-value').innerHTML = document.getElementById('distance-slider').value
     }
 
-    function expiry_slider() {
-        document.getElementById('expiry-value').innerHTML = document.getElementById('expiry-slider').value
-    }
-
     function toggle(object) {
-        if (object.style.backgroundColor  == 'green') {
-            object.style.backgroundColor= '#6c757d';
+        if (object.style.backgroundColor == 'green') {
+            object.style.backgroundColor = '#6c757d';
         } else {
-            object.style.backgroundColor= 'green'
+            object.style.backgroundColor = 'green'
         }
     }
 </script>
 
 <navbar>
-    <a href="filter.html"><i class="fas fa-search"></i></a>
-    <a href="index.html"><i class="fas fa-home"></i></a>
-    <a href="profileview.html"><i class="fas fa-bars"></i></a>
+    <a href="index.html"><i class="fas fa-times"></i>Back</a>
+    <a href="add_listing.html"><i class="fas fa-plus"></i>Add Item</a>
+    <a href="index.html"><i class="fas fa-home"></i>Home</a>
+    <a href="profileview.html"><i class="fas fa-bars"></i>Menu</a>
+</navbar>
+
 </navbar>
 </body>
 </html>

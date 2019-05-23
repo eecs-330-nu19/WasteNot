@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add Listing</title>
+    <title>Listing</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -15,29 +15,32 @@
 </head>
 <body>
 
-<H1 id="title">Create New Listing</H1>
+<!--<H1 id="title">Create New Listing</H1>-->
+<H1 id="title">WasteNot</H1>
 <div class="container">
-    <div id="new">
-        <form>
-            <div class="form-group">
-                <label for="exampleFormControlFile1"><i class="fas fa-camera"></i> Photo of Item</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-            </div>
-            <div class="form-group">
-                <label for="title">Item Name</label>
-                <input type="text" class="form-control" placeholder="Enter your items name...">
-            </div>
-            <div class="form-group">
-                <label for="desc">Item Description</label>
-                <textarea class="form-control" id="desc" rows="3"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="example-number-input">Days until it expires</label>
-                <input class="form-control" type="number" value="3" id="example-number-input">
-            </div>
+    <img id="listing-image" src="images/apple.jpg">
+    <div id="listing-info">
+        <H2 id="listing-title">Apple</H2>
+        <p id="item-description">8 Fresh apples waiting to be picked up!</p>
+        <br>
+        <p> Goes bad in: </p>
+        <h3 id="goes-bad-in">10</h3>
+        <p> days. </p>
 
-        </form>
-        <a href="index.html"><button type="submit" class="btn btn-primary">Submit</button></a>
+        <br>
+        <h3 id="distace-from-you">2.4</h3>
+        <p> miles away from you.</p>
+        <a href="index.html"><button type="submit" class="btn btn-primary">Contact the Poster</button></a>
+    </div>
+    <div id="profile-info">
+      <img id="profile-picture" src="images/DefaultProPic.png">
+      <p>Name:</p>
+      <h3 id="poster-name">John</h3>
+
+      <br>
+      <br>
+      <h3 id="distace-from-you">2.4</h3>
+      <p> miles away from you.</p>
     </div>
 </div>
 

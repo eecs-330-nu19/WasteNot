@@ -28,12 +28,37 @@
     height: auto;
 }
 
+#search-criteria {
+    padding: 10px;
+    padding-top: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+#search-criteria h3 {
+    text-align: right;
+}
+
 
 #title {
-    color: #5cb031;
-    background-color: #e6e6e6;
+    color: #7ac533;
+    text-shadow: -.5px 0px 0px darkgreen;
     padding: 5px;
     text-align: center;
+    padding-bottom:5px;
+    background:
+            linear-gradient(
+                    to bottom,
+                    rgba(0,0,0,.15) 0%,
+                    rgba(0,0,0,0) 100%
+            )
+            left
+            bottom
+            #f8f8f8
+            no-repeat;
+    background-size:100% 5px ;
 }
 
 navbar {
@@ -41,16 +66,46 @@ navbar {
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: nowrap;
-    background-color: darkgrey;
-    height: 50px;
+    background-color: #e9e9e9;
+    height: 60px;
     position: fixed;
     bottom: 0px;
     width: 100%;
     padding: 15px;
+    padding-top: 25px;
+    background:
+            linear-gradient(
+                    to bottom,
+                    rgba(0,0,0,0) 0%,
+                    rgba(0,0,0,.15) 100%
+            )
+            right
+            top
+            #f8f8f8
+            no-repeat;
+    background-size:100% 5px ;
+
 }
 navbar i {
     font-size: 20px;
 }
+
+navbar a {
+    color: black;
+}
+navbar a:hover {
+  color: #5cb031;
+}
+navbar i {
+    margin-right: 5px
+}
+navbar a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
 
 #login-body #logo{
   font-size:100px;
@@ -63,26 +118,23 @@ navbar i {
   display: block;
 }
 
-#login-body #title{
-  color: #FFFFFF;
-  font-size: 20px;
-  padding:10px;
-  display: block;
-}
-
 #login-body #content{
   height: 100%;
 }
 
 #login-body .login-area{
   font-size: 25px;
-  font-weight: lighter;
+  /* font-weight: lighter;*/
   margin: 30px;
   height: 100%;
 }
 
+#login-body .login-area input{
+  border: 1px solid #ced4da;
+}
+
 #login-body #submit-button{
-  background-color: #5cb031; /* Green */
+  background-color: #007bff; /* Blue */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -90,6 +142,16 @@ navbar i {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+#login-body .login-area input{
+  border-radius: .25rem;
+  padding: 5px;
+}
+
+/* invalid color */
+#login-body .login-area input[type=email]:invalid {
+  border: 1px solid red;
 }
 
 #login-body #forgot-password {
@@ -105,48 +167,11 @@ navbar i {
   flex-wrap: wrap;
 }
 
-#new .wrapper {
-    text-align: center;
-    margin: 20px;
-    flex-basis: 100px;
-    background-color: lightgrey;
-    border: gray;
-    border-style: solid;
-    border-width: 2px;
-    /* center divs*/
-    right: 0;
-    left: 0;
-    margin-right: auto;
-    margin-left: auto;
-    /* give it dimensions */
-    width: 50%;
-}
-
 .wrapper i {
   margin-top: 15px;
   font-size: 50px;
 }
 
-#new .caption {
-  text-align: center;
-  margin-bottom: -20px;
-}
-
-#new .box {
-  margin: 20px;
-  flex-basis: 30px;
-  background-color: lightgrey;
-  border: gray;
-  border-style: solid;
-  border-width: 2px;
-  /* center divs*/
-  right: 0;
-  left: 0;
-  margin-right: auto;
-  margin-left: auto;
-  /* give it dimensions */
-  width: 50%;
-}
 
 #expiration {
   margin-top: 15px;
@@ -166,11 +191,6 @@ navbar i {
 	font-size: 12px;
 }
 
-#new .submit {
-    color: #5cb031;
-    text-align: center;
-    font-size: 30px;
-}
 #filter button {
     margin: 2px;
 }
@@ -183,126 +203,157 @@ navbar i {
     margin-top: 20px
 }
 
-/*Danielle's Css*/
-
-#viewprofile {
-    background-color: #5cb031;
+#new  {
+    padding: 10px;
 }
-
+/*Danielle's Css*/
 .propic {
     border-radius: 50%;
     width: 30%;
     height: auto;
-} 
+    border: 1px solid black;
+}
 
 .proname {
     font-size: 25px;
-    color: #e6e6e6;
+    color: black;
 }
 
 .proitems {
     text-align: center;
     padding-top: 30px;
- 
+
 }
 .pronewlinks {
     border-top: 2px solid;
-    border-color: black;
+    border-color: #5cb031;
     font-size: 30px;
 }
 #prolinkformat a{
-    color: #e6e6e6;
+    color: black;
 }
 #prolinkformat a:hover {
-  color: dodgerblue;
+  color: #5cb031;
 }
 .profileitem {
-    color: #e6e6e6;
+    color: black;
 }
-.editing {
+.editing,.notediting  {
     margin: 10px;
-    background-color: darkgrey;
     border: 1px solid grey;
-    color: #e6e6e6;
-    width: 40%;
+    color: black;
+    width: 55%;
     height: auto;
     padding: 2px;
 }
 #viewer{
     font-size: 20px;
+    cursor: pointer;
 }
 #viewer:hover {
-    color: dodgerblue;
+    color: #5cb031;
 }
-
-#proaligning {
+#proaligning, #proaligning-password  {
     text-align: right;
-    width: 20%;
+    width: 90px;
     height: auto;
     display: inline-block;
     font-size: 20px;
 
 }
 #proaligning-password {
-    text-align: right;
-    width: 20%;
-    height: auto;
-    display: inline-block;
     margin-left: 20px;
-    font-size: 20px;
+}
+.editing:focus {
+  outline: none !important;
+  border: 2px solid #5cb031;
+  box-shadow: 0 0 10px;
 }
 
+.notediting:focus {
+  outline: none !important;
+}
+.notediting{
+  cursor: not-allowed;
+}
 .editbutton {
-  color: #e6e6e6;
-  background-color: darkgrey;
+  color: black;
   border-color: grey;
   font-size: 20px;
 }
 
-procloseout {   
-    display: inline-block;
-    height: 50px;
-    position: fixed;
-    bottom: 0px;
-    width: 50%;
-    padding: 15px;
-
-}
-.proback  {
-  text-align: left;
-}
-.procloseoutbutton {
-  text-align: right;
-  margin-left: 50%;
-}
-procloseout a {
-    font-size: 20px;
-}
-navbar a {
-  color: black;
+.editbutton:hover {
+  background-color: #5cb031;
 }
 
+.editbutton:focus {
+  outline: none !important;
+}
 .anitem {
   border-bottom: 5px solid darkgrey;
   text-align: center;
+  width: 100%;
 }
 .itemInfo{
   display: inline-block;
   color: black;
-  width: 60%;
-  text-align: right;
+  width: 49%;
   vertical-align: middle;
+  text-align: left;
 }
 #information{
   color: #5cb031;
-  font-size: 15px;
-
+  font-size: 80%;
+  width: 95%;
+  text-align: right;
 }
 .anitem img {
   border: 5px solid #5cb031;
-  width: 150px;
+  width: 70%;
   height: auto;
-  margin: 10px;
+  margin: 5%;
+}
+#addpic {
+  filter: alpha(opacity=0);
+  opacity: 0;
+  text-align: center;
+}
+#labeladdpic:hover {
+  background: #5cb031;
+}
+#labeladdpic{
+  color: black;
+  border: 1px solid grey;
+  width: 200px;
+  height: auto;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer; 
+}
+/*End of Danielle's Css*/
+
+/* listing page css*/
+
+#listing-image{
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
 }
 
-/*End of Danielle's Css*/
+#listing-info{
+  display: inline-block;
+  width: 70%;
+  margin: 0;
+}
+
+#profile-info{
+  display: inline-block;
+  width: 25%;
+  margin: 0;
+}
+
+#profile-info #profile-picture{
+  width: 100%;
+}
