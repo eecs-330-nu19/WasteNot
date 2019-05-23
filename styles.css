@@ -109,6 +109,9 @@ navbar a {
     flex-direction: column;
     text-align: center;
 }
+navbar #currentpage {
+  color: #5cb031;
+}
 
 
 #login-body #logo{
