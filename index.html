@@ -12,14 +12,18 @@
     <link rel="stylesheet" href="styles.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
           integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <meta property="og:url"           content="https://eecs-330-nu19.github.io/WasteNot/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Waste Not" />
+    <meta property="og:description"   content="A sharing platform to fight food waste" />
+    <meta property="og:image"         content="https://i.postimg.cc/N0Fy5pPc/banana.jpg" />
 </head>
 <body>
-
 <H1 id="title">WasteNot</H1>
 <div id='content' class="container">
     <div style='display:none' class="alert alert-warning" role="alert" id="none-found">
         <p class="lead">No items found matching these criteria</p>
-        <a href="filter.html"><i class="fa fa-search"></i>  Search</a>
+        <a href="filter.html"><i class="fa  fa-search"></i>  Search</a>
     </div>
 
 
@@ -27,10 +31,15 @@
         <p class="lead">Here are the items matching your search</p>
     </div>
 
+    <div style='display:none' class="alert alert-success" role="alert" id="added">
+        <p class="lead"><i class="fas fa-check"></i> Your item was added!</p>
+    </div>
+
     <div style='display: none' class="alert alert-warning" role="alert" id="none-found-search">
         <p class="lead">No items matches your search for: <span id="search-string"></span></p>
         <a href="filter.html"><i class="fa fa-search"></i>  Search</a>
     </div>
+
 
 
 
@@ -118,6 +127,11 @@
     let none_search = document.getElementById('none-found-search');
     let search_string = document.getElementById('search-string');
 
+    let added = params['added'];
+    document.getElementById('added').style.display = 'inherit';
+
+
+
     if (search) {
         search = search.toLowerCase();
         let boxes = document.querySelectorAll('#index a');
@@ -201,9 +215,9 @@
 </script>
 
 <navbar>
+    <a class='current' href="index.html"><i class="fas fa-home"></i>Home</a>
     <a href="filter.html"><i class="fas fa-search"></i>Search</a>
     <a href="add_listing.html"><i class="fas fa-plus"></i>Add Item</a>
-    <a href="index.html"><i class="fas fa-home"></i>Home</a>
     <a href="profileview.html"><i class="fas fa-bars"></i>Menu</a>
 </navbar>
 </body>
