@@ -97,6 +97,9 @@ navbar i {
 navbar a {
     color: black;
 }
+navbar a.current {
+    color: green;
+}
 navbar a:hover {
   color: #5cb031;
 }
