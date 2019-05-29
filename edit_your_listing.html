@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Listing</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+
+<H1 id="title">Create New Listing</H1>
+<div class="container">
+    <div id="new">
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlFile1"><i class="fas fa-camera"></i> Photo of Item</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+            <div class="form-group">
+                <label for="title">Item Name</label>
+                <input type="text" class="form-control" placeholder="Enter your items name...">
+            </div>
+            <div class="form-group">
+                <label for="desc">Item Description</label>
+                <textarea class="form-control" id="desc" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="example-number-input">Days until it expires</label>
+                <input class="form-control" type="number" value="3" id="example-number-input">
+            </div>
+
+        </form>
+        <a href="index.html"><button type="submit" class="btn btn-primary">Submit</button></a>
+    </div>
+</div>
+
+
+<navbar>
+    <a href="index.html"><i class="fas fa-home"></i>Home</a>
+    <a href="filter.html"><i class="fas fa-search"></i>Search</a>
+    <a id = "currentpage" href="add_listing.html"><i class="fas fa-plus"></i>Add Item</a>
+    <a href="profileview.html"><i class="fas fa-bars"></i>Menu</a>
+</navbar>
+</body>
+</html>
