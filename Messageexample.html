@@ -17,22 +17,27 @@
 <body>
 
 <H1 id="title">Message</H1>
-<div class="container-fluid">
+<div id="messexample" class="container-fluid">
     <div class='anitem'>
         <a href="Profile2.html">
             <div class="massagepic">
-                <img class="propic" src="images/DefaultProPic.png">
+                <img class="propic" src="images/JoeShmoe.png">
             </div>
         
         Contact: Joe Shmoe
         </a>
     </div>
-    <div id="rightm" class="box1 sb8">Hello, Joe Shmoe</div>
-    <div id="leftm" class="box1 sb7">Hello, John Smith</div>
-    <div id="rightm" class="box1 sb8">I'm interested in your apples. Are they still available?</div>  
+    <div id='replies'>
+        <div id="rightm" class="box1 sb8">Hello, Joe Shmoe</div>
+        <div id="leftm" class="box1 sb7">Hello, John Smith</div>
+        <div id="rightm" class="box1 sb8">I'm interested in your apples. Are they still available?</div>  
+    </div>
 </div>
 
-
+<inputtext>
+    <input id="messagetosend" type="text" class="form-control" placeholder="Enter your items name...">
+    <button onclick="sendmessage()" type="submit" class="btn-primary">Send</button>
+</inputtext>
 <navbar>
     <a href="index.html"><i class="fas fa-home"></i>Home</a>
     <a href="filter.html"><i class="fas fa-search"></i>Search</a>
@@ -40,6 +45,13 @@
     <a href="profileview.html"><i class="fas fa-bars"></i>Menu</a>
 </navbar>
 
-</navbar>
+<script>
+    function sendmessage(){
+        mess = document.getElementById('messagetosend').value
+        if (mess != "") {
+        document.getElementById("replies").innerHTML += "<div id='rightm' class='box1 sb8'>" + mess + "</div>"
+        document.getElementById('messagetosend').value =""}
+    }
+</script>
 </body>
 </html>
