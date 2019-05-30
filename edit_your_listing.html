@@ -37,21 +37,16 @@
             </div>
 
         </form>
-        <a href="index.html"><button onclick="toIndex()" type="submit" class="btn btn-primary">Submit</button></a>
+        <a href="index.html"><button type="submit" class="btn btn-primary">Submit</button></a>
     </div>
 </div>
 
-<script>
-    function toIndex() {
-        window.location = 'index.html?added=true'
-    }
-</script>
 
 <navbar>
     <a href="index.html"><i class="fas fa-home"></i>Home</a>
     <a href="filter.html"><i class="fas fa-search"></i>Search</a>
-    <a class='current'  href="add_listing.html"><i class="fas fa-plus"></i>Add Item</a>
-    <a href="profileview.html"><i class="fas fa-bars"></i>Menu</a></navbar>
+    <a id = "currentpage" href="add_listing.html"><i class="fas fa-plus"></i>Add Item</a>
+    <a href="profileview.html"><i class="fas fa-bars"></i>Menu</a>
 </navbar>
 </body>
 </html>

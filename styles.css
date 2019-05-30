@@ -2,7 +2,7 @@
      padding-top: 20px
  }
 
-.container{
+.container, .container-fluid{
     padding-bottom: 60px;
 }
 
@@ -97,6 +97,9 @@ navbar i {
 navbar a {
     color: black;
 }
+navbar a.current {
+    color: green;
+}
 navbar a:hover {
   color: #5cb031;
 }
@@ -108,6 +111,9 @@ navbar a {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+}
+navbar #currentpage {
+  color: #5cb031;
 }
 
 
@@ -214,7 +220,7 @@ navbar a {
 .propic {
     border-radius: 50%;
     width: 30%;
-    height: auto;
+    height: 30%;
     border: 1px solid black;
 }
 
@@ -233,10 +239,10 @@ navbar a {
     border-color: #5cb031;
     font-size: 30px;
 }
-#prolinkformat a{
+.prolinkformat a{
     color: black;
 }
-#prolinkformat a:hover {
+.prolinkformat a:hover {
   color: #5cb031;
 }
 .profileitem {
@@ -257,7 +263,7 @@ navbar a {
 #viewer:hover {
     color: #5cb031;
 }
-#proaligning, #proaligning-password  {
+.proaligning, .proaligning-password  {
     text-align: right;
     width: 90px;
     height: auto;
@@ -265,7 +271,7 @@ navbar a {
     font-size: 20px;
 
 }
-#proaligning-password {
+.proaligning-password {
     margin-left: 20px;
 }
 .editing:focus {
@@ -295,8 +301,8 @@ navbar a {
 }
 .anitem {
   border-bottom: 5px solid darkgrey;
-  text-align: center;
   width: 100%;
+
 }
 .itemInfo{
   display: inline-block;
@@ -339,7 +345,7 @@ navbar a {
 /* listing page css*/
 
 #listing-image{
-  width: 80%;
+  width: 70%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -360,4 +366,163 @@ navbar a {
 
 #profile-info #profile-picture{
   width: 100%;
+}
+
+.messagesitem{
+  display: inline-block;
+  color: black;
+  vertical-align: middle;
+}
+#mpic {
+  width: 30%;
+  height: auto;
+  text-align: center;
+}
+#mtext {
+  width: 60%;
+  height: auto;
+  text-align: right;
+}
+#addmes {
+  font-size: 300%;
+}
+#messcontcat {
+  font-size: 120%;
+  text-align: left;
+  margin-left: 5%;
+}
+#messpreview {
+  font-size: 80%;
+  text-align: left;
+  margin-left: 10%;
+  color: grey;
+}
+.massagepic {
+  width: 20%;
+  display: inline-block;
+}
+.massagepic img{
+  border: 1px solid black;
+}
+.contactinput {
+  width: 50%;
+  border: 1px solid gray;
+}
+
+
+.usermessage{
+  text-align: right;
+}
+.contactmessage{
+  text-align: left;
+}
+.box1 {
+  width: 100%;
+  margin-top: 30px;
+  border: 4px solid grey;
+  padding: 20px;
+  font-weight: 900;
+  font-family: arial;
+  position: relative;
+}
+.leftm {
+  text-align: left;
+  color: #00bfb6;
+}
+.rightm {
+  text-align: right; 
+  color: black;
+}
+
+
+/* speech bubble 7 */
+
+.sb7:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid grey;
+  border-right: 10px solid transparent;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid transparent;
+  left: 20px;
+  bottom: -23px;
+}
+
+.sb7:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #fff;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+  border-bottom: 10px solid transparent;
+  left: 24px;
+  bottom: -13px;
+}
+
+
+/* speech bubble 8 */
+
+.sb8:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid grey;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid transparent;
+  right: 20px;
+  bottom: -23px;
+}
+
+.sb8:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #fff;
+  border-top: 10px solid #fff;
+  border-bottom: 10px solid transparent;
+  right: 24px;
+  bottom: -13px;
+}
+
+inputtext {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  background-color: #e9e9e9;
+  height: 60px;
+  position: fixed;
+  bottom: 60px;
+  width: 100%;
+  padding: 15px;
+  background:
+          linear-gradient(
+                  to bottom,
+                  rgba(0,0,0,0) 0%,
+                  rgba(0,0,0,.15) 100%
+          )
+          right
+          top
+          #f8f8f8
+          no-repeat;
+  background-size:100% 5px ;
+
+} 
+inputtext .form-control{
+  width: 80%;
+}
+inputtext .btn-primary{
+  height: 35px;
+}
+#messexample {
+  padding-bottom: 140px;
+  overflow: scroll;
 }

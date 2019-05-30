@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Listing</title>
+    <title>W3.CSS Template!</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -12,42 +12,46 @@
     <link rel="stylesheet" href="styles.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
           integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/input.css"/>
 </head>
 <body>
 
-<!--<H1 id="title">Create New Listing</H1>-->
-<H1 id="title">WasteNot</H1>
-<div class="container">
-    <img id="listing-image" src="images/apple.jpg">
-    <div id="listing-info">
-        <H2 id="listing-title">Apple</H2>
-        <p id="item-description">8 Fresh apples waiting to be picked up!</p>
-        <br>
-        <p> Goes bad in: </p>
-        <h3 id="goes-bad-in">10</h3>
-        <p> days. </p>
-
-        <br>
-        <h3 id="distace-from-you">2.4</h3>
-        <p> miles away from you.</p>
-        <a href="NewMessage.html"><button type="submit" class="btn btn-primary">Contact the Poster</button></a>
+<H1 id="title">Message</H1>
+<div id="messexample" class="container-fluid">
+    <div class='anitem'>
+        <a href="Profile2.html">
+            <div class="massagepic">
+                <img class="propic" src="images/JoeShmoe.png">
+            </div>
+        
+        Contact: Joe Shmoe
+        </a>
     </div>
-    <div id="profile-info">
-      <img id="profile-picture" src="images/DefaultProPic.png">
-      <p>Name:</p>
-      <h3 id="poster-name">John</h3>
-
-      <br>
-      <br>
-      <h3 id="distace-from-you">2.4</h3>
-      <p> miles away from you.</p>
+    <div id='replies'>
+        <div class="rightm box1 sb8">Hello, Joe Shmoe</div>
+        <div class="leftm box1 sb7">Hello, John Smith</div>
+        <div class="rightm box1 sb8">I'm interested in your apples. Are they still available?</div>
     </div>
 </div>
+
+<inputtext>
+    <input id="messagetosend" type="text" class="form-control" placeholder="Say hi!">
+    <button onclick="sendmessage()" type="submit" class="btn-primary">Send</button>
+</inputtext>
 <navbar>
     <a href="index.html"><i class="fas fa-home"></i>Home</a>
     <a href="filter.html"><i class="fas fa-search"></i>Search</a>
     <a href="add_listing.html"><i class="fas fa-plus"></i>Add Item</a>
     <a href="profileview.html"><i class="fas fa-bars"></i>Menu</a>
 </navbar>
+
+<script>
+    function sendmessage(){
+        mess = document.getElementById('messagetosend').value
+        if (mess != "") {
+        document.getElementById("replies").innerHTML += "<div id='rightm' class='box1 sb8'>" + mess + "</div>"
+        document.getElementById('messagetosend').value =""}
+    }
+</script>
 </body>
 </html>
