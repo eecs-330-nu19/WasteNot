@@ -346,22 +346,17 @@ navbar #currentpage {
 
 #listing-image{
   width: 70%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5%;
 }
 
 #listing-info{
-  display: inline-block;
-  width: 70%;
-  margin: 0;
+text-align: left;
+}
+#listing-info h2 {
+    text-align: center;
 }
 
 #profile-info{
   display: inline-block;
-  width: 25%;
-  margin: 0;
 }
 
 #profile-info #profile-picture{
