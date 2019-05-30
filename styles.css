@@ -338,7 +338,7 @@ navbar #currentpage {
   height: auto;
   text-align: center;
   font-size: 15px;
-  cursor: pointer; 
+  cursor: pointer;
 }
 /*End of Danielle's Css*/
 
@@ -422,7 +422,7 @@ text-align: left;
   color: #00bfb6;
 }
 .rightm {
-  text-align: right; 
+  text-align: right;
   color: black;
 }
 
@@ -507,7 +507,7 @@ inputtext {
           no-repeat;
   background-size:100% 5px ;
 
-} 
+}
 inputtext .form-control{
   width: 80%;
 }
@@ -517,4 +517,38 @@ inputtext .btn-primary{
 #messexample {
   padding-bottom: 140px;
   overflow: scroll;
+}
+
+/* Leaderboard */
+
+#leaderboard-container ul{
+  list-style-type: none;
+}
+
+#leaderboard-container li{
+  border-bottom: 1px solid black;
+}
+
+#leaderboard-container #first-place{
+  color:gold;
+}
+
+#leaderboard-container #second-place{
+  color:silver;
+}
+
+#leaderboard-container #third-place{
+  color:#cd7f32;
+}
+
+#leaderboard-container .self-score{
+  border: 2px solid  #7ac533;
+}
+
+#leaderboard-container .profile-picture{
+  display: inline-block;  
+}
+
+#leaderboard-container .score-container{
+  display: inline-block;
 }
