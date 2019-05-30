@@ -1,8 +1,8 @@
 #content {
-     padding-top: 20px
- }
+    padding-top: 20px
+}
 
-.container, .container-fluid{
+.container, .container-fluid {
     padding-bottom: 60px;
 }
 
@@ -41,6 +41,7 @@
     justify-content: center;
     margin-bottom: 5px;
 }
+
 #search-criteria h3 {
     text-align: right;
 }
@@ -51,18 +52,13 @@
     text-shadow: -.5px 0px 0px darkgreen;
     padding: 5px;
     text-align: center;
-    padding-bottom:5px;
-    background:
-            linear-gradient(
-                    to bottom,
-                    rgba(0,0,0,.15) 0%,
-                    rgba(0,0,0,0) 100%
-            )
-            left
-            bottom
-            #f8f8f8
-            no-repeat;
-    background-size:100% 5px ;
+    padding-bottom: 5px;
+    background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, .15) 0%,
+            rgba(0, 0, 0, 0) 100%
+    ) left bottom #f8f8f8 no-repeat;
+    background-size: 100% 5px;
 }
 
 navbar {
@@ -77,19 +73,15 @@ navbar {
     width: 100%;
     padding: 15px;
     padding-top: 25px;
-    background:
-            linear-gradient(
-                    to bottom,
-                    rgba(0,0,0,0) 0%,
-                    rgba(0,0,0,.15) 100%
-            )
-            right
-            top
-            #f8f8f8
-            no-repeat;
-    background-size:100% 5px ;
+    background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, .15) 100%
+    ) right top #f8f8f8 no-repeat;
+    background-size: 100% 5px;
 
 }
+
 navbar i {
     font-size: 20px;
 }
@@ -97,71 +89,76 @@ navbar i {
 navbar a {
     color: black;
 }
+
 navbar a.current {
     color: green;
 }
+
 navbar a:hover {
-  color: #5cb031;
+    color: #5cb031;
 }
+
 navbar i {
     margin-right: 5px
 }
+
 navbar a {
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
 }
+
 navbar #currentpage {
-  color: #5cb031;
+    color: #5cb031;
 }
 
 
-#login-body #logo{
-  font-size:100px;
-  color: #5cb031;
-  background-color: #e6e6e6;
-  margin-bottom: 0;
-  text-align: center;
-  font-style: italic;
-  letter-spacing: -20px;
-  display: block;
+#login-body #logo {
+    font-size: 100px;
+    color: #5cb031;
+    background-color: #e6e6e6;
+    margin-bottom: 0;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: -20px;
+    display: block;
 }
 
-#login-body #content{
-  height: 100%;
+#login-body #content {
+    height: 100%;
 }
 
-#login-body .login-area{
-  font-size: 25px;
-  /* font-weight: lighter;*/
-  margin: 30px;
-  height: 100%;
+#login-body .login-area {
+    font-size: 25px;
+    /* font-weight: lighter;*/
+    margin: 30px;
+    height: 100%;
 }
 
-#login-body .login-area input{
-  border: 1px solid #ced4da;
+#login-body .login-area input {
+    border: 1px solid #ced4da;
 }
 
-#login-body #submit-button{
-  background-color: #007bff; /* Blue */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+#login-body #submit-button {
+    background-color: #007bff; /* Blue */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
-#login-body .login-area input{
-  border-radius: .25rem;
-  padding: 5px;
+#login-body .login-area input {
+    border-radius: .25rem;
+    padding: 5px;
 }
 
 /* invalid color */
 #login-body .login-area input[type=email]:invalid {
-  border: 1px solid red;
+    border: 1px solid red;
 }
 
 #login-body #forgot-password {
@@ -171,34 +168,34 @@ navbar #currentpage {
 }
 
 .new-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .wrapper i {
-  margin-top: 15px;
-  font-size: 50px;
+    margin-top: 15px;
+    font-size: 50px;
 }
 
 
 #expiration {
-  margin-top: 15px;
-  margin-left: 25%;
-	width: 50%;
+    margin-top: 15px;
+    margin-left: 25%;
+    width: 50%;
 }
 
 #minimum {
-	margin-left: 25%;
-	font-size: 12px;
+    margin-left: 25%;
+    font-size: 12px;
 }
 
-#maximum{
-	position: relative;
-	bottom: 18px;
-	margin-left: 70%;
-	font-size: 12px;
+#maximum {
+    position: relative;
+    bottom: 18px;
+    margin-left: 70%;
+    font-size: 12px;
 }
 
 #filter button {
@@ -213,9 +210,10 @@ navbar #currentpage {
     margin-top: 20px
 }
 
-#new  {
+#new {
     padding: 10px;
 }
+
 /*Danielle's Css*/
 .propic {
     border-radius: 50%;
@@ -234,21 +232,26 @@ navbar #currentpage {
     padding-top: 30px;
 
 }
+
 .pronewlinks {
     border-top: 2px solid;
     border-color: #5cb031;
     font-size: 30px;
 }
-.prolinkformat a{
+
+.prolinkformat a {
     color: black;
 }
+
 .prolinkformat a:hover {
-  color: #5cb031;
+    color: #5cb031;
 }
+
 .profileitem {
     color: black;
 }
-.editing,.notediting  {
+
+.editing, .notediting {
     margin: 10px;
     border: 1px solid grey;
     color: black;
@@ -256,14 +259,17 @@ navbar #currentpage {
     height: auto;
     padding: 2px;
 }
-#viewer{
+
+#viewer {
     font-size: 20px;
     cursor: pointer;
 }
+
 #viewer:hover {
     color: #5cb031;
 }
-.proaligning, .proaligning-password  {
+
+.proaligning, .proaligning-password {
     text-align: right;
     width: 90px;
     height: auto;
@@ -271,250 +277,277 @@ navbar #currentpage {
     font-size: 20px;
 
 }
+
 .proaligning-password {
     margin-left: 20px;
 }
+
 .editing:focus {
-  outline: none !important;
-  border: 2px solid #5cb031;
-  box-shadow: 0 0 10px;
+    outline: none !important;
+    border: 2px solid #5cb031;
+    box-shadow: 0 0 10px;
 }
 
 .notediting:focus {
-  outline: none !important;
+    outline: none !important;
 }
-.notediting{
-  cursor: not-allowed;
+
+.notediting {
+    cursor: not-allowed;
 }
+
 .editbutton {
-  color: black;
-  border-color: grey;
-  font-size: 20px;
+    color: black;
+    border-color: grey;
+    font-size: 20px;
 }
 
 .editbutton:hover {
-  background-color: #5cb031;
+    background-color: #5cb031;
 }
 
 .editbutton:focus {
-  outline: none !important;
+    outline: none !important;
 }
+
 .anitem {
-  border-bottom: 5px solid darkgrey;
-  width: 100%;
+    border-bottom: 5px solid darkgrey;
+    width: 100%;
 
 }
-.itemInfo{
-  display: inline-block;
-  color: black;
-  width: 49%;
-  vertical-align: middle;
-  text-align: left;
+
+.itemInfo {
+    display: inline-block;
+    color: black;
+    width: 49%;
+    vertical-align: middle;
+    text-align: left;
 }
-#information{
-  color: #5cb031;
-  font-size: 80%;
-  width: 95%;
-  text-align: right;
+
+#information {
+    color: #5cb031;
+    font-size: 80%;
+    width: 95%;
+    text-align: right;
 }
+
 .anitem img {
-  border: 5px solid #5cb031;
-  width: 70%;
-  height: auto;
-  margin: 5%;
+    border: 5px solid #5cb031;
+    width: 70%;
+    height: auto;
+    margin: 5%;
 }
+
 #addpic {
-  filter: alpha(opacity=0);
-  opacity: 0;
-  text-align: center;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    text-align: center;
 }
+
 #labeladdpic:hover {
-  background: #5cb031;
+    background: #5cb031;
 }
-#labeladdpic{
-  color: black;
-  border: 1px solid grey;
-  width: 200px;
-  height: auto;
-  text-align: center;
-  font-size: 15px;
-  cursor: pointer; 
+
+#labeladdpic {
+    color: black;
+    border: 1px solid grey;
+    width: 200px;
+    height: auto;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
 }
+
 /*End of Danielle's Css*/
 
 /* listing page css*/
 
 
-#listing-info{
-text-align: left;
+#listing-info {
+    text-align: left;
 }
+
 #listing-info h2 {
     text-align: center;
 }
 
-#profile-info{
-  display: inline-block;
+#profile-info {
+    display: inline-block;
 }
 
-#profile-info #profile-picture{
-  width: 100%;
+#profile-info #profile-picture {
+    width: 100%;
 }
 
-.messagesitem{
-  display: inline-block;
-  color: black;
-  vertical-align: middle;
+.messagesitem {
+    display: inline-block;
+    color: black;
+    vertical-align: middle;
 }
+
 #mpic {
-  width: 30%;
-  height: auto;
-  text-align: center;
+    width: 30%;
+    height: auto;
+    text-align: center;
 }
+
 #mtext {
-  width: 60%;
-  height: auto;
-  text-align: right;
+    width: 60%;
+    height: auto;
+    text-align: right;
 }
+
 #addmes {
-  font-size: 300%;
+    font-size: 300%;
 }
+
 #messcontcat {
-  font-size: 120%;
-  text-align: left;
-  margin-left: 5%;
+    font-size: 120%;
+    text-align: left;
+    margin-left: 5%;
 }
+
 #messpreview {
-  font-size: 80%;
-  text-align: left;
-  margin-left: 10%;
-  color: grey;
+    font-size: 80%;
+    text-align: left;
+    margin-left: 10%;
+    color: grey;
 }
+
 .massagepic {
-  width: 20%;
-  display: inline-block;
+    width: 20%;
+    display: inline-block;
 }
-.massagepic img{
-  border: 1px solid black;
+
+.massagepic img {
+    border: 1px solid black;
 }
+
 .contactinput {
-  width: 50%;
-  border: 1px solid gray;
+    width: 50%;
+    border: 1px solid gray;
 }
 
 
-.usermessage{
-  text-align: right;
+.usermessage {
+    text-align: right;
 }
-.contactmessage{
-  text-align: left;
+
+.contactmessage {
+    text-align: left;
 }
+
 .box1 {
-  width: 100%;
-  margin-top: 30px;
-  border: 4px solid grey;
-  padding: 20px;
-  font-weight: 900;
-  font-family: arial;
-  position: relative;
+    width: 100%;
+    margin-top: 30px;
+    border: 4px solid grey;
+    padding: 20px;
+    font-weight: 900;
+    font-family: arial;
+    position: relative;
 }
+
 .leftm {
-  text-align: left;
-  color: #00bfb6;
+    text-align: left;
+    color: #00bfb6;
 }
+
 .rightm {
-  text-align: right; 
-  color: black;
+    text-align: right;
+    color: black;
 }
 
 
 /* speech bubble 7 */
 
 .sb7:before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 10px solid grey;
-  border-right: 10px solid transparent;
-  border-top: 10px solid grey;
-  border-bottom: 10px solid transparent;
-  left: 20px;
-  bottom: -23px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid grey;
+    border-right: 10px solid transparent;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid transparent;
+    left: 20px;
+    bottom: -23px;
 }
 
 .sb7:after {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 10px solid #fff;
-  border-right: 10px solid transparent;
-  border-top: 10px solid #fff;
-  border-bottom: 10px solid transparent;
-  left: 24px;
-  bottom: -13px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid #fff;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fff;
+    border-bottom: 10px solid transparent;
+    left: 24px;
+    bottom: -13px;
 }
 
 
 /* speech bubble 8 */
 
 .sb8:before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 10px solid transparent;
-  border-right: 10px solid grey;
-  border-top: 10px solid grey;
-  border-bottom: 10px solid transparent;
-  right: 20px;
-  bottom: -23px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid grey;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid transparent;
+    right: 20px;
+    bottom: -23px;
 }
 
 .sb8:after {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 10px solid transparent;
-  border-right: 10px solid #fff;
-  border-top: 10px solid #fff;
-  border-bottom: 10px solid transparent;
-  right: 24px;
-  bottom: -13px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid #fff;
+    border-top: 10px solid #fff;
+    border-bottom: 10px solid transparent;
+    right: 24px;
+    bottom: -13px;
 }
 
 inputtext {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: nowrap;
-  background-color: #e9e9e9;
-  height: 60px;
-  position: fixed;
-  bottom: 60px;
-  width: 100%;
-  padding: 15px;
-  background:
-          linear-gradient(
-                  to bottom,
-                  rgba(0,0,0,0) 0%,
-                  rgba(0,0,0,.15) 100%
-          )
-          right
-          top
-          #f8f8f8
-          no-repeat;
-  background-size:100% 5px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    background-color: #e9e9e9;
+    height: 60px;
+    position: fixed;
+    bottom: 60px;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, .15) 100%
+    ) right top #f8f8f8 no-repeat;
+    background-size: 100% 5px;
 
-} 
-inputtext .form-control{
-  width: 80%;
 }
-inputtext .btn-primary{
-  height: 35px;
+
+inputtext .form-control {
+    width: 80%;
 }
+
+inputtext .btn-primary {
+    height: 35px;
+}
+
 #messexample {
-  padding-bottom: 140px;
-  overflow: scroll;
+    padding-bottom: 140px;
+    overflow: scroll;
+}
+
+#added {
+    background-color: #aef882;
 }
