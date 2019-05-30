@@ -239,10 +239,10 @@ navbar #currentpage {
     border-color: #5cb031;
     font-size: 30px;
 }
-#prolinkformat a{
+.prolinkformat a{
     color: black;
 }
-#prolinkformat a:hover {
+.prolinkformat a:hover {
   color: #5cb031;
 }
 .profileitem {
@@ -263,7 +263,7 @@ navbar #currentpage {
 #viewer:hover {
     color: #5cb031;
 }
-#proaligning, #proaligning-password  {
+.proaligning, .proaligning-password  {
     text-align: right;
     width: 90px;
     height: auto;
@@ -271,7 +271,7 @@ navbar #currentpage {
     font-size: 20px;
 
 }
-#proaligning-password {
+.proaligning-password {
     margin-left: 20px;
 }
 .editing:focus {
@@ -425,11 +425,11 @@ navbar #currentpage {
   font-family: arial;
   position: relative;
 }
-#leftm {
+.leftm {
   text-align: left;
   color: #00bfb6;
 }
-#rightm {
+.rightm {
   text-align: right; 
   color: black;
 }
