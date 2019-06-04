@@ -608,12 +608,12 @@ inputtext .btn-primary {
 }
 
 #leaderboard-container .profile-picture{
-  display: inline-block;  
+  display: inline-block;
 }
 
 #leaderboard-container .score-container{
   display: inline-block;
-    padding-bottom: 140px;
+    padding-bottom: 0px;
     overflow: scroll;
 }
 
