@@ -535,6 +535,10 @@ inputtext {
 
 }
 
+#listing-image {
+    max-height: 250px;
+}
+
 inputtext .form-control {
     width: 80%;
 }
