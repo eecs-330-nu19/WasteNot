@@ -585,6 +585,7 @@ inputtext .btn-primary {
 
 #leaderboard-container ul{
   list-style-type: none;
+  padding: 30px;
 }
 
 #leaderboard-container #first-place{
