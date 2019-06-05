@@ -587,10 +587,6 @@ inputtext .btn-primary {
   list-style-type: none;
 }
 
-#leaderboard-container li{
-  border-bottom: 1px solid black;
-}
-
 #leaderboard-container #first-place{
   color:gold;
 }
@@ -607,14 +603,22 @@ inputtext .btn-primary {
   border: 2px solid  #7ac533;
 }
 
-#leaderboard-container .profile-picture{
-  display: inline-block;
+#leaderboard-container .score-container{
+  padding-left: 20px;
 }
 
-#leaderboard-container .score-container{
-  display: inline-block;
-    padding-bottom: 0px;
-    overflow: scroll;
+#leaderboard-container .propic{
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+#leaderboard-container ul li {
+  display: flex;
+  justify-content center;
+  flex-direction: row;
+  margin-bottom: 20px;
+  padding: 10px;
 }
 
 #added {
